@@ -36,8 +36,27 @@ public class Sequence
     {
         //TODO: return array of only even integers in the sequence
         // the array should be the exact correct size containing only the even numbers
-        
-        return new int[0];
+
+        int em = mMax;
+        if (mMax %2 == 1)
+        {
+            em = mMax - 1;
+        }
+
+        int e = mMin;
+        if (mMin % 2 == 1) {
+            e = mMin + 1;
+        }
+
+        int array_e[] = new int[(em - e) /2 + 1];
+
+            for (int i = 0; i < array_e.length; i++)
+            {
+                array_e[i] = e;
+                e += 2;
+            }
+
+        return array_e;
     }
 
     public int[] squares()
